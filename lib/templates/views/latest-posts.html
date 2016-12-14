@@ -1,0 +1,15 @@
+<h2 class="visually-hidden">Latest Posts</h2>
+<ul class="unstyled latest-posts">
+  {{#each posts}}
+    <li>
+      <h3>
+        <a href="/posts/{{id}}">{{ title }}</a>
+        <div class="meta">
+          <span class="visually-hidden">Published:</span>
+          <time>{{ dateString }}</time>
+        </div>
+      </h3>
+      {{body}}
+    </li>
+  {{/each}}
+</ul>

@@ -1,0 +1,3 @@
+ul.latest-posts > li + li {
+  margin-top: 3em;
+}

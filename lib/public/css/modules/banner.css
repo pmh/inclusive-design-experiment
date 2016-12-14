@@ -1,0 +1,44 @@
+[role="banner"] {
+  background         : #fff;
+  font-family        : 'Merriweather', Trebuchet, georgia, times, serif;
+  -webkit-box-shadow : 0 0.125em 0.2375em -0.125em rgba(90,79,79,0.75);
+  -moz-box-shadow    : 0 0.125em 0.2375em -0.125em rgba(90,79,79,0.75);
+  box-shadow         : 0 0.125em 0.2375em -0.125em rgba(90,79,79,0.75);
+  width              : 100%;
+  padding            : 0 1em;
+
+  /* clearfix */
+  overflow           : hidden;
+  _overflow          : visible; /* for IE */
+  _zoom              : 1; /* for IE */
+}
+
+[role="banner"] > * {
+  padding-top: .2em;
+}
+
+[role="banner"] h1 {
+  float       : left;
+}
+
+[role="banner"] h1 a {
+  background-image : none;
+  text-shadow      : none;
+}
+
+[role="banner"] svg {
+  color  : #5A4F4F;
+  width  : 10em;
+  height : 2em;
+}
+
+[role="banner"] nav {
+  float: right;
+}
+
+@media (max-width: 37em) {
+  [role="banner"] > * {
+    width      : 100%;
+    text-align : center;
+  }
+}

@@ -1,0 +1,201 @@
+
+/***** BASE *****/
+
+html, body {
+  margin  : 0;
+  padding : 0;
+}
+
+html {
+  font-family : Trebuchet, georgia, times, serif;
+  font-size   : calc(.8em + .8vw);
+  font-weight : 300;
+  line-height : 1.5;
+  color       : #222;
+  box-sizing  : border-box;
+  overflow    : visible;
+}
+
+body {
+  margin-bottom : 1.5em;
+  background    : #fff;
+}
+
+*, *:before, *:after {
+  box-sizing : inherit;
+  overflow   : inherit;
+}
+
+* {
+  font-family : inherit;
+  line-height : inherit;
+  color       : inherit;
+}
+
+/* Skip link */
+
+body > [href="#main"] {
+  position : absolute;
+  top      : 0;
+  right    : 100%;
+}
+
+body > [href="#main"]:focus {
+  position : relative;
+  display  : inline-block;
+  margin   : .5em;
+  right    : auto;
+}
+
+/* Main */
+
+main {
+  max-width  : 40rem;
+  margin     : auto;
+  margin-top : 1.5em;
+  padding    : 0 .75em;
+}
+
+/* Vertical Rythm */
+
+main * + * {
+  margin-top: 1.5rem;
+}
+
+li, dt, dd, br, th, td {
+  margin-top: 0;
+}
+
+* + h2,
+* + h3 {
+    /* Using em instead of rem here to ensure that headings appear closer to the content */
+    margin-top: 1.5em;
+}
+
+/* Placeholders */
+
+::placeholder {
+  color      : #000;
+  font-style : italic;
+}
+
+::-webkit-input-placeholder {
+  color      : #000;
+  font-style : italic;
+}
+
+::-moz-placeholder {
+  color      : #000;
+  font-style : italic;
+}
+
+/* Headers */
+
+h1 {
+  font-size   : .8em;
+  line-height : 1;
+  margin      : 0;
+  padding     : 0;
+}
+
+h2 {
+  border-bottom: .1em solid currentColor
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Merriweather', Trebuchet, georgia, times, serif;
+  color: #5A4F4F;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #5A4F4F;
+}
+
+
+/* Anchors */
+a {
+  color               : #40629c;
+  text-decoration     : none;
+  text-shadow         : 0.1em 0      0 #fff, -0.1em   0     0 #fff,
+                        0     0.1em  0 #fff,  0      -0.1em 0 #fff,
+                        0.1em 0      0 #fff, -0.1em   0     0 #fff,
+                        0     0.1em  0 #fff,  0      -0.1em 0 #fff;
+  background-image    : linear-gradient(to right, currentColor 0%, currentColor 100%);
+  background-repeat   : repeat-x;
+  background-position : bottom 0.05em center;
+  background-size     : 100% 0.1em;
+}
+
+/* External Links */
+
+[href^="http"]:not([href*="mydomain.com"])::after {
+  display             : inline-block;
+  width               : 1em;
+  height              : 1em;
+  background-image    : url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20d%3D%22M128%20320s29.412-96%20192-96v96l192-128L320%2064v96c-128%200-192%2079.836-192%20160zm224%2064H64V192h62.938c5.047-5.96%2010.456-11.667%2016.244-17.09%2021.982-20.595%2048.28-36.326%2078.057-46.91H0v320h416V313.688l-64%2042.667V384z%22/%3E%3C/svg%3E%0A);
+  background-repeat   : no-repeat;
+  background-position : center;
+  background-size     : 75% auto;
+
+  /* alternative text rules */
+  content             : '(external link)';
+  overflow            : hidden;
+  white-space         : nowrap;
+  text-indent         : 1em; /* the width of the icon */
+}
+
+/* Paragraphs */
+
+p {
+  color         : #222;
+  margin-bottom : inherit;
+}
+
+p + p {
+  text-indent : 1em;
+}
+
+p:first-of-type:not(:only-of-type):first-letter {
+  float         : left;
+  font-size     : 3em;
+  line-height   : .8;
+  padding-top   : .12em;
+  padding-right : .1em;
+}
+
+/* SVG */
+
+svg {
+  display      : inline-block;
+  width        : 1em;
+  height       : 1em;
+  stroke       : currentColor;
+  fill         : currentColor;
+}
+
+/* Print styles */
+
+@media print {
+  body > *:not(main) {
+    display : none;
+  }
+}
+
+/***** UTILS *****/
+
+.visually-hidden {
+  position : absolute;
+  width    : 1px;
+  height   : 1px;
+  overflow : hidden;
+  clip     : rect(1px, 1px, 1px, 1px);
+}

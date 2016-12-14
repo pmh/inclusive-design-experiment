@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="{{ lang }}" dir="{{ dir }}">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="/favicon.ico?v=2" />
+
+    <link rel="stylesheet" href="{{ publicPath }}/css/fonts.css" media="none" onload="if(media!='all')media='all'">
+    <noscript><link rel="stylesheet" href="{{ publicPath }}/css/fonts.css"></noscript>
+
+    <link rel="stylesheet" href="{{ publicPath }}/css/base.css" media="none" onload="if(media!='all')media='all'">
+    <noscript><link rel="stylesheet" href="{{ publicPath }}/css/base.css"></noscript>
+
+    <link rel="stylesheet" href="{{ publicPath }}/css/modules.css" media="none" onload="if(media!='all')media='all'">
+    <noscript><link rel="stylesheet" href="{{ publicPath }}/css/modules.css"></noscript>
+
+    <title>Inclusive Design Blog | {{ title }}</title>
+  </head>
+  <body>
+    <!-- skip link for keyboard users -->
+    <a href="#main">skip to main content</a>
+
+    <svg hidden width="0" height="0" style="display: none;">
+      <!-- <symbol id="logo" viewBox="0 0 200 26" xmlns="http://www.w3.org/2000/svg"><title>Inclusive Design Blog - Logo</title><g fill="none" fill-rule="evenodd" font-family="AmericanTypewriter-Bold, American Typewriter" font-weight="bold"><text font-size="10" letter-spacing="1.786" fill="#5A4F4F"><tspan x="1" y="25">INCLUSIVE</tspan></text><text font-size="36" letter-spacing="6.429" fill="#5A4E4E"><tspan x="78.7" y="25">BLOG</tspan></text></g></symbol> -->
+      <!-- <symbol id="logo" viewBox="0 0 200 26" xmlns="http://www.w3.org/2000/svg"><title>Inclusive Design Blog - Logo</title><g fill="none" fill-rule="evenodd"><text font-family="AmericanTypewriter, American Typewriter" font-size="10" letter-spacing="2.39" fill="#5A4F4F"><tspan x="1" y="24">INCLUSIV</tspan> <tspan x="68.43" y="24">E</tspan></text><text font-family="AmericanTypewriter-Bold, American Typewriter" font-size="36" font-weight="bold" letter-spacing="6.429" fill="#5A4E4E"><tspan x="78.7" y="25">BLOG</tspan></text></g></symbol> -->
+      <symbol id="logo" viewBox="0 0 206 44" xmlns="http://www.w3.org/2000/svg"><title>Inclusive Blog</title><g fill="#5A4F4F" fill-rule="evenodd"><text font-family="AmericanTypewriter, American Typewriter" font-size="10" letter-spacing="2.39"><tspan x="0" y="33">INCLUSIVE</tspan></text><text font-family="AmericanTypewriter-Bold, American Typewriter" font-size="36" font-weight="bold" letter-spacing="6.429"><tspan x="77.7" y="34">BLOG</tspan></text></g></symbol>
+      <symbol id="menu-icon"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>Menu</title><path class="path1" d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path></symbol>
+      <symbol id="share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Share</title><path d="M128 320s29.412-96 192-96v96l192-128L320 64v96c-128 0-192 79.836-192 160zm224 64H64V192h62.938c5.047-5.96 10.456-11.667 16.244-17.09 21.982-20.595 48.28-36.326 78.057-46.91H0v320h416V313.688l-64 42.667V384z"/></symbol>
+    </svg>
+
+    <header role="banner">
+      <h1>
+        <a href="/posts/latest" aria-label="Inclusive Blog">
+          <svg>
+            <use xlink:href="#logo" />
+          </svg>
+        </a>
+      </h1>
+      <nav role="navigation" aria-label="site links">
+        <ul class="unstyled">
+          <li><a href="/posts/latest">Latest Posts</a></li>
+          <li><a href="/posts/archive">Archive</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main" id="main" aria-live="polite" aria-atomic="true">
+      {{{ content }}}
+    </main>
+
+    <script src="{{ publicPath }}/js/common.js"></script>
+    <script src="{{ publicPath }}/js/main.js"></script>
+  </body>
+</html>

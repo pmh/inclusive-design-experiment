@@ -1,0 +1,16 @@
+[role="banner"] nav ul {
+  margin : 0;
+}
+
+[role="banner"] nav li {
+  display : inline-block;
+}
+
+[role="banner"] nav li + li {
+  margin-left : .75em;
+}
+
+[role="banner"] nav a {
+  color       : #5A4F4F;
+  font-weight : bold;
+}
