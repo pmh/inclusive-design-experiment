@@ -4,7 +4,7 @@ const nodeEnv           = process.env.NODE_ENV || 'development'
 const isProd            = nodeEnv === 'production'
 
 module.exports =
-{ devtool : isProd ? 'hidden-source-map' : 'eval-source-map'
+{ devtool : isProd ? '' : 'source-map'
 , context : path.join(__dirname)
 , entry   :
     { main     : './lib/public/js/modules/main/index.js'
@@ -32,25 +32,12 @@ module.exports =
     }
 , plugins:
     [ new webpack.optimize.CommonsChunkPlugin({ name: 'common' })
-    , new webpack.LoaderOptionsPlugin(
-        { options:
-            { worker:
-                { output:
-                    { filename      : 'activity.js'
-                    , chunkFilename : "[id].activity.js"
-                    }
-                }
-            }
-        }
-      ),
+    , new webpack.optimize.UglifyJsPlugin({ compress : { warnings : false }, output : { comments : false }, sourceMap : false })
     // , new webpack.DefinePlugin(
     //     { 'process.env': { NODE_ENV: JSON.stringify(nodeEnv) }
     //     }
     //   )
-    ].concat(
-      isProd ? [new webpack.optimize.UglifyJsPlugin({ compress : { warnings : false }, output : { comments : false }, sourceMap : false })]
-             : []
-    )
+    ]
 , devServer :
     { contentBase: '.'
     }

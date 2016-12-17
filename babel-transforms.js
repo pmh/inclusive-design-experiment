@@ -12,9 +12,9 @@ utils =
   , match           : true
   , constrainedArgs : true
   , dispatch        : true
-  , List            : true
-  , Map             : true
-  , Set             : true
+  , IList           : true
+  , IMap            : true
+  , ISet            : true
   , Maybe           : true
   , maybe           : true
   , Result          : true

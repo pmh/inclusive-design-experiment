@@ -111,5 +111,5 @@ gulp.task('run:server', done => {
 // -- API
 
 gulp.task( 'start:dev' , ['run:server', 'run:webpack', 'sync:dist', 'watch:css', 'watch:templates', 'watch:img'] )
-gulp.task( 'build'     , ['compile:css', 'compile:js', 'move:img'])
+gulp.task( 'build'     , ['compile:css', 'compile:js', 'compile:templates', 'move:img'])
 gulp.task( 'default'   , ['start:dev'])
