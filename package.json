@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
-    "start": "gulp"
+    "now-build": "NODE_ENV=production gulp build",
+    "start": "gulp",
+    "now-start": "NODE_ENV=production node index.js"
   },
   "keywords": [
     "accessibility",
